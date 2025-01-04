@@ -26,7 +26,7 @@ export default function Home() {
           className="w-[30rem] h-[12rem] object-cover"
         />
       </div>
-      <div className="flex items-center absolute top-[9.4rem] left-60 gap-[0.8rem]">
+      <div className="flex items-center absolute top-[9.4rem] left-80 gap-[0.8rem]">
         <Image
           src='/profile.jpg'
           alt="profile image"
@@ -57,6 +57,25 @@ export default function Home() {
               <Image src="/leetcode.svg" alt="leetcode" width={24} height={24} className="invert" />
             </a>
           </div>
+        </div>
+      </div>
+
+      <div className="absolute left-80 top-[20rem] max-w-3xl mt-[2rem]">
+        <h2 className="text-zinc-300 text-2xl font-semibold mb-4">About Me.</h2>
+        <div className="flex flex-col gap-4 text-zinc-400">
+          <p>
+            Hey, I'm Aditya Chaudhary, an undergraduate Computer Science student and full-stack developer who loves
+            building and shipping things that people actually use.
+          </p>
+          <p>
+            I mainly work with React.js, Next.js, and Node.js for both frontend and backend, using TypeScript
+            alongside them. I have created many cool projects using these technologies.
+          </p>
+          <p>
+            If you have an idea and would like to collaborate, feel free to DM me! I'm always open and ready to
+            connect and work on exciting projects. Also, be sure to check out my other side, just click the top right
+            button!
+          </p>
         </div>
       </div>
     </div>
