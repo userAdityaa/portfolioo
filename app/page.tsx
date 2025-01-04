@@ -26,6 +26,15 @@ export default function Home() {
           className="w-[30rem] h-[12rem] object-cover"
         />
       </div>
+      <div className="flex items-center absolute top-[9.4rem] left-60 gap-[0.8rem]">
+        <Image
+          src='/profile.jpg'
+          alt="profile image"
+          height={30}
+          width={175}
+          className="rounded-lg"
+        />
+      </div>
     </div>
   );
 }
