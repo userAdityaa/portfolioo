@@ -64,17 +64,13 @@ export default function Home() {
         <h2 className="text-zinc-300 text-2xl font-semibold mb-4">About Me.</h2>
         <div className="flex flex-col gap-4 text-zinc-400">
           <p>
-            Hey, I'm Aditya Chaudhary, an undergraduate Computer Science student and full-stack developer who loves
-            building and shipping things that people actually use.
+            Hi, I'm Aditya Chaudhary, a Computer Science undergraduate and full-stack developer passionate about creating and delivering projects that make a real-world impact.
           </p>
           <p>
-            I mainly work with React.js, Next.js, and Node.js for both frontend and backend, using TypeScript
-            alongside them. I have created many cool projects using these technologies.
+            I primarily work with Next.js, Node.js, Golang for full-stack development, often leveraging TypeScript for type safety. Additionally, I’ve built several exciting projects using Golang and other modern tools.
           </p>
           <p>
-            If you have an idea and would like to collaborate, feel free to DM me! I'm always open and ready to
-            connect and work on exciting projects. Also, be sure to check out my other side, just click the top right
-            button!
+            Got an idea and want to collaborate? Feel free to DM me! I’m always excited to connect and work on awesome projects. Don’t forget to explore more about me—just click the button in the top right corner!
           </p>
         </div>
       </div>
