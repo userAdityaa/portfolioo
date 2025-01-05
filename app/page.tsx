@@ -1,16 +1,5 @@
 import Image from "next/image";
-import { ReactNode } from "react";
 import { SkillsSection } from "./components";
-
-interface SkillButtonProps {
-  children: ReactNode;
-}
-
-const SkillButton = ({ children }: SkillButtonProps) => (
-  <div className="bg-[#1c1c1c] text-white py-2.5 px-2 rounded-md flex items-center gap-3 border border-zinc-800/50 hover:bg-zinc-800/50 transition-colors">
-    {children}
-  </div>
-);
 
 export default function Home() {
   return (
@@ -54,18 +43,53 @@ export default function Home() {
           </div>
           <p className="text-gray-300">Software Engineer</p>
           <div className="flex gap-3 mt-1">
-            <a href="https://github.com/userAdityaa" className="bg-black w-9 h-9 rounded-lg flex items-center justify-center hover:bg-zinc-900 transition-colors shadow-lg border-[1px] border-zinc-600" target="_blank">
-              <Image src="/github.svg" alt="GitHub" width={24} height={24} className="invert" />
-            </a>
-            <a href="https://x.com/userAdityaa" className="bg-black w-9 h-9 rounded-lg flex items-center justify-center hover:bg-zinc-900 transition-colors shadow-lg border-[1px] border-zinc-600" target="_blank">
-              <Image src="/twitter.svg" alt="Twitter" width={24} height={24} className="invert" />
-            </a>
-            <a href="https://www.linkedin.com/in/aditya-chaudhary-1b7354248/" className="bg-black w-9 h-9 rounded-lg flex items-center justify-center hover:bg-zinc-900 transition-colors shadow-lg border-[1px] border-zinc-600" target="_blank">
-              <Image src="/linkedin.svg" alt="LinkedIn" width={24} height={24} className="invert" />
-            </a>
-            <a href="https://leetcode.com/u/Aditya7841/" className="bg-black w-9 h-9 rounded-lg flex items-center justify-center hover:bg-zinc-900 transition-colors shadow-lg border-[1px] border-zinc-600" target="_blank">
-              <Image src="/leetcode.svg" alt="leetcode" width={24} height={24} className="invert" />
-            </a>
+            <div className="relative group">
+              <a href="https://github.com/userAdityaa" className="bg-black w-9 h-9 rounded-lg flex items-center justify-center hover:bg-zinc-900 transition-colors shadow-lg border-[1px] border-zinc-600" target="_blank">
+                <Image src="/github.svg" alt="GitHub" width={24} height={24} className="invert" />
+              </a>
+              <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="relative bg-white text-black text-sm py-1 px-3 rounded-md whitespace-nowrap">
+                  Github
+                  <div className="absolute w-3 h-3 bg-white transform rotate-45 left-1/2 -bottom-1.5 -translate-x-1/2"></div>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative group">
+              <a href="https://x.com/userAdityaa" className="bg-black w-9 h-9 rounded-lg flex items-center justify-center hover:bg-zinc-900 transition-colors shadow-lg border-[1px] border-zinc-600" target="_blank">
+                <Image src="/twitter.svg" alt="Twitter" width={24} height={24} className="invert" />
+              </a>
+              <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="relative bg-white text-black text-sm py-1 px-3 rounded-md whitespace-nowrap">
+                  Twitter
+                  <div className="absolute w-3 h-3 bg-white transform rotate-45 left-1/2 -bottom-1.5 -translate-x-1/2"></div>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative group">
+              <a href="https://www.linkedin.com/in/aditya-chaudhary-1b7354248/" className="bg-black w-9 h-9 rounded-lg flex items-center justify-center hover:bg-zinc-900 transition-colors shadow-lg border-[1px] border-zinc-600" target="_blank">
+                <Image src="/linkedin.svg" alt="LinkedIn" width={24} height={24} className="invert" />
+              </a>
+              <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="relative bg-white text-black text-sm py-1 px-3 rounded-md whitespace-nowrap">
+                  LinkedIn
+                  <div className="absolute w-3 h-3 bg-white transform rotate-45 left-1/2 -bottom-1.5 -translate-x-1/2"></div>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative group">
+              <a href="https://leetcode.com/u/Aditya7841/" className="bg-black w-9 h-9 rounded-lg flex items-center justify-center hover:bg-zinc-900 transition-colors shadow-lg border-[1px] border-zinc-600" target="_blank">
+                <Image src="/leetcode.svg" alt="leetcode" width={24} height={24} className="invert" />
+              </a>
+              <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="relative bg-white text-black text-sm py-1 px-3 rounded-md whitespace-nowrap">
+                  LeetCode
+                  <div className="absolute w-3 h-3 bg-white transform rotate-45 left-1/2 -bottom-1.5 -translate-x-1/2"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
