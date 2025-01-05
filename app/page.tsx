@@ -1,8 +1,20 @@
 import Image from "next/image";
+import { ReactNode } from "react";
+import { SkillsSection } from "./components";
+
+interface SkillButtonProps {
+  children: ReactNode;
+}
+
+const SkillButton = ({ children }: SkillButtonProps) => (
+  <div className="bg-[#1c1c1c] text-white py-2.5 px-2 rounded-md flex items-center gap-3 border border-zinc-800/50 hover:bg-zinc-800/50 transition-colors">
+    {children}
+  </div>
+);
 
 export default function Home() {
   return (
-    <div className="bg-[#181818] h-[100vh] w-[100vw]">
+    <div className="bg-[#181818] min-h-screen w-full overflow-y-auto">
       <div className="flex">
         <Image
           src="/banner.gif"
@@ -26,6 +38,7 @@ export default function Home() {
           className="w-[30rem] h-[12rem] object-cover"
         />
       </div>
+      
       <div className="flex items-center absolute top-[9.4rem] left-80 gap-[0.8rem]">
         <Image
           src='/profile.jpg'
@@ -57,20 +70,22 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="absolute left-80 top-[20rem] max-w-3xl mt-[2rem]">
+      <div className="absolute left-80 top-[20rem] max-w-3xl mt-[2rem] pb-20">
         <h2 className="text-zinc-300 text-2xl font-semibold mb-4">About Me.</h2>
         <div className="flex flex-col gap-4 text-zinc-400">
           <p>
             Hi, I'm Aditya Chaudhary, a Computer Science undergraduate and full-stack developer passionate about creating and delivering projects that make a real-world impact.
           </p>
           <p>
-            I primarily work with Next.js, Node.js, Golang for full-stack development, often leveraging TypeScript for type safety. Additionally, I’ve built several exciting projects using Golang and other modern tools.
+            I primarily work with Next.js, Node.js, Golang for full-stack development, often leveraging TypeScript for type safety. Additionally, I've built several exciting projects using Golang and other modern tools.
           </p>
           <p>
-            Got an idea and want to collaborate? Feel free to DM me! I’m always excited to connect and work on awesome projects. Don’t forget to explore more about me—just click the button in the top right corner!
+            Got an idea and want to collaborate? Feel free to DM me! I'm always excited to connect and work on awesome projects. Don't forget to explore more about me—just click the button in the top right corner!
           </p>
         </div>
       </div>
+
+      <SkillsSection/>
     </div>
   );
 }
