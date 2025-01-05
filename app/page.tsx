@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { SkillsSection } from "./components";
+import { ContactAndFooter, ProfileImageSwitcher, ProjectsSection, SkillsSection } from "./components";
 
 export default function Home() {
   return (
-    <div className="bg-[#181818] min-h-screen w-full overflow-y-auto">
+    <div className="bg-[#111111] min-h-screen w-full overflow-y-auto transition-all duration-300">
       <div className="flex">
         <Image
           src="/banner.gif"
@@ -29,13 +29,7 @@ export default function Home() {
       </div>
       
       <div className="flex items-center absolute top-[9.4rem] left-80 gap-[0.8rem]">
-        <Image
-          src='/profile.jpg'
-          alt="profile image"
-          height={30}
-          width={175}
-          className="rounded-lg"
-        />
+        <ProfileImageSwitcher/>
         <div className="flex flex-col pt-14">
           <div className="flex items-center gap-3">
             <h1 className="text-zinc-300 font-bold text-[25px]">Aditya Chaudhary</h1>
@@ -126,6 +120,9 @@ export default function Home() {
         <div className="flex items-center">
           <Image src = '/project.gif' alt="tired" width={500} height={100} className="-mt-[2rem]"></Image>
         </div>
+
+        <ProjectsSection/>
+        <ContactAndFooter/>
       </div>      
     </div>
   );
