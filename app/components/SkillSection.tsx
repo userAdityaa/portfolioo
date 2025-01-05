@@ -6,13 +6,13 @@ interface SkillButtonProps {
 }
 
 const SkillButton = ({ children }: SkillButtonProps) => (
-  <div className="bg-[#1c1c1c] text-white py-2.5 px-2 rounded-md flex items-center gap-3 border border-zinc-800/50 hover:bg-zinc-800/50 transition-colors">
+  <div className="bg-[#1c1c1c] text-white py-2 px-2 rounded-md flex items-center gap-2 border border-zinc-800/50 hover:bg-zinc-800/50 transition-colors">
     {children}
   </div>
 );
 
 const SkillsSection = () => (
-  <div className="absolute left-80 top-[35rem] max-w-[53rem] mt-[2rem] pb-20">
+  <div className="absolute left-80 top-[35rem] max-w-[50rem] mt-[2rem] pb-20">
     <h2 className="text-zinc-300 text-2xl font-semibold mb-4 mt-8">Skills & Tools.</h2>
     <div className="flex items-center flex-wrap gap-4">
       <SkillButton>
