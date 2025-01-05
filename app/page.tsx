@@ -41,19 +41,16 @@ export default function Home() {
           </div>
           <p className="text-gray-300">Software Engineer</p>
           <div className="flex gap-3 mt-1">
-            <a href="#" className="bg-black w-9 h-9 rounded-lg flex items-center justify-center hover:bg-zinc-900 transition-colors shadow-lg">
+            <a href="https://github.com/userAdityaa" className="bg-black w-9 h-9 rounded-lg flex items-center justify-center hover:bg-zinc-900 transition-colors shadow-lg border-[0.9px] border-zinc-400" target="_blank">
               <Image src="/github.svg" alt="GitHub" width={24} height={24} className="invert" />
             </a>
-            <a href="#" className="bg-black w-9 h-9 rounded-lg flex items-center justify-center hover:bg-zinc-900 transition-colors shadow-lg">
+            <a href="https://x.com/userAdityaa" className="bg-black w-9 h-9 rounded-lg flex items-center justify-center hover:bg-zinc-900 transition-colors shadow-lg border-[0.9px] border-zinc-400" target="_blank">
               <Image src="/twitter.svg" alt="Twitter" width={24} height={24} className="invert" />
             </a>
-            <a href="#" className="bg-black w-9 h-9 rounded-lg flex items-center justify-center hover:bg-zinc-900 transition-colors shadow-lg">
-              <Image src="/discord.svg" alt="Discord" width={24} height={24} className="invert" />
-            </a>
-            <a href="#" className="bg-black w-9 h-9 rounded-lg flex items-center justify-center hover:bg-zinc-900 transition-colors shadow-lg">
+            <a href="https://www.linkedin.com/in/aditya-chaudhary-1b7354248/" className="bg-black w-9 h-9 rounded-lg flex items-center justify-center hover:bg-zinc-900 transition-colors shadow-lg border-[0.9px] border-zinc-400" target="_blank">
               <Image src="/linkedin.svg" alt="LinkedIn" width={24} height={24} className="invert" />
             </a>
-            <a href="#" className="bg-black w-9 h-9 rounded-lg flex items-center justify-center hover:bg-zinc-900 transition-colors shadow-lg">
+            <a href="https://leetcode.com/u/Aditya7841/" className="bg-black w-9 h-9 rounded-lg flex items-center justify-center hover:bg-zinc-900 transition-colors shadow-lg border-[0.9px] border-zinc-400" target="_blank">
               <Image src="/leetcode.svg" alt="leetcode" width={24} height={24} className="invert" />
             </a>
           </div>
