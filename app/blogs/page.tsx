@@ -1,36 +1,39 @@
+'use client'
 import React from 'react'
 import Image from 'next/image'
 import { ProfileImageSwitcher } from '../components'
+import { useRouter } from 'next/navigation'
 
 const page = () => {
+  const router = useRouter();
   return (
     <div className="bg-[#111111] min-h-screen w-full overflow-y-auto transition-all duration-300">
-          <div className="flex">
-            <Image
-              src="/blogs.gif"
-              alt="Banner 1"
-              width={0}
-              height={0}
-              className="w-[30rem] h-[12rem] object-cover"
-            />
-            <Image
-              src="/blogs.gif"
-              alt="Banner 2"
-              width={0}
-              height={0}
-              className="w-[30rem] h-[12rem] object-cover"
-            />
-            <Image
-              src="/blogs.gif"
-              alt="Banner 2"
-              width={0}
-              height={0}
-              className="w-[30rem] h-[12rem] object-cover"
-            />
-          </div>
+      <div className="flex">
+        <Image
+          src="/blogs.gif"
+          alt="Banner 1"
+          width={0}
+          height={0}
+          className="w-[30rem] h-[12rem] object-cover"
+        />
+        <Image
+          src="/blogs.gif"
+          alt="Banner 2"
+          width={0}
+          height={0}
+          className="w-[30rem] h-[12rem] object-cover"
+        />
+        <Image
+          src="/blogs.gif"
+          alt="Banner 2"
+          width={0}
+          height={0}
+          className="w-[30rem] h-[12rem] object-cover"
+        />
+      </div>
 
-        <div className="flex items-center absolute top-[9.4rem] left-80 gap-[0.8rem]">
-        <ProfileImageSwitcher image_one="/banner-5.jpg" image_two = "/banner-6.jpg"/>
+      <div className="flex items-center absolute top-[9.4rem] left-80 gap-[0.8rem]">
+        <ProfileImageSwitcher image_one="/banner-5.jpg" image_two="/banner-6.jpg"/>
         <div className="flex flex-col pt-14">
           <div className="flex items-center gap-3">
             <h1 className="text-zinc-300 font-bold text-[25px]">Aditya Chaudhary</h1>
@@ -49,7 +52,6 @@ const page = () => {
                 </div>
               </div>
             </div>
-
             <div className="relative group">
               <a href="https://x.com/userAdityaa" className="bg-black w-9 h-9 rounded-lg flex items-center justify-center hover:bg-zinc-900 transition-colors shadow-lg border-[1px] border-zinc-600" target="_blank">
                 <Image src="/twitter.svg" alt="Twitter" width={24} height={24} className="invert" />
@@ -84,6 +86,29 @@ const page = () => {
                   <div className="absolute w-3 h-3 bg-white transform rotate-45 left-1/2 -bottom-1.5 -translate-x-1/2"></div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="absolute left-80 top-[20rem] max-w-4xl mt-[2rem] pb-20">
+        <h2 className="text-zinc-300 text-2xl font-semibold mb-6">Blogs.</h2>
+        <div className="bg-[#1A1A1A] rounded-xl p-6 border border-zinc-800 hover:border-zinc-700 transition-colors" onClick={() => router.push('/blogs/docker')}>
+          <div className="flex items-start gap-4">
+            <Image
+              src="/first.jpg"
+              alt="Blog profile"
+              width={180}
+              height={56}
+              className="rounded-lg"
+            />
+            <div className="flex-1">
+              <h3 className="text-zinc-200 text-xl font-semibold mb-2">
+              Dockerized Chaos: How Containers Revolutionize Creative Development Workflows
+              </h3>
+              <p className="text-zinc-400 text-base leading-relaxed">
+              Explore how Docker transforms the way developers think about workflows, bringing organization to the chaos of multi-environment setups. From running experimental side projects to scaling production-ready applications.
+              </p>
             </div>
           </div>
         </div>
