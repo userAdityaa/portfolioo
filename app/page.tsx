@@ -94,7 +94,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="absolute left-80 top-[20rem] max-w-3xl mt-[2rem] pb-20">
+      <div className="absolute left-80 top-[20rem] max-w-3xl mt-[2rem] pb-20 flex flex-col">
         <h2 className="text-zinc-300 text-2xl font-semibold mb-4">About Me.</h2>
         <div className="flex flex-col gap-4 text-zinc-400">
           <p>
@@ -122,9 +122,11 @@ export default function Home() {
             </button>
           </div>
         </div>
-      </div>
-
-      <SkillsSection/>
+        <SkillsSection/>
+        <div className="flex items-center">
+          <Image src = '/project.gif' alt="tired" width={500} height={100} className="-mt-[2rem]"></Image>
+        </div>
+      </div>      
     </div>
   );
 }
