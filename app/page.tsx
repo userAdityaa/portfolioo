@@ -28,8 +28,29 @@ export default function Home() {
         />
       </div>
       
+      <a 
+        href="/blogs" 
+        className="flex items-center gap-2 bg-zinc-900 px-4 py-2 h-fit rounded-lg hover:bg-zinc-800 transition-colors shadow-lg text-zinc-300 absolute right-2 top-2"
+      >
+        <svg 
+          className="w-5 h-5" 
+          viewBox="0 0 24 24" 
+          fill="none" 
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path 
+            d="M12 6H6C4.89543 6 4 6.89543 4 8V18C4 19.1046 4.89543 20 6 20H18C19.1046 20 20 19.1046 20 18V12M12 6L20 6M12 6V4M20 6V4M20 4L12 4M20 4V12" 
+            stroke="currentColor" 
+            strokeWidth="2" 
+            strokeLinecap="round" 
+            strokeLinejoin="round"
+          />
+        </svg>
+        Blogs
+      </a>
+  
       <div className="flex items-center absolute top-[9.4rem] left-80 gap-[0.8rem]">
-        <ProfileImageSwitcher/>
+        <ProfileImageSwitcher image_one = '/profile.jpg' image_two = "/profile-2.JPG"/>
         <div className="flex flex-col pt-14">
           <div className="flex items-center gap-3">
             <h1 className="text-zinc-300 font-bold text-[25px]">Aditya Chaudhary</h1>

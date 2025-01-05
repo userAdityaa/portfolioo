@@ -2,7 +2,12 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
-const ProfileImageSwitcher = () => {
+interface ProfileImageProps {
+    image_one: string, 
+    image_two: string,
+}
+
+const ProfileImageSwitcher: React.FC<ProfileImageProps> = ({image_one, image_two}) => {
   const [currentImage, setCurrentImage] = useState('/profile.jpg');
   const [isTransitioning, setIsTransitioning] = useState(false);
 
@@ -12,7 +17,7 @@ const ProfileImageSwitcher = () => {
       
       setTimeout(() => {
         setCurrentImage(prev => 
-          prev === '/profile.jpg' ? '/profile-2.JPG' : '/profile.jpg'
+          prev === `${image_one}` ? `${image_two}` : `${image_one}`
         );
         setIsTransitioning(false);
       }, 300); 
