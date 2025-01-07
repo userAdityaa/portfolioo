@@ -148,8 +148,9 @@ const ProjectsSection: React.FC = () => {
     {
       title: "Todoodle Project",
       description: "A full stack application with the feature to make todo, schedule todo, write sticky notes, create events. This project is made upon next.js and typescript for the frontend part, where as the combo of Go + MongoDB make this project much faster.",
-      status: "Building",
+      status: "Live",
       image: "/todo_project.png",
+      demoLink: "https://minimal-planner.vercel.app",
       githubLink: "https://github.com/userAdityaa/todo_website",
       previewVideo: "/videos/todo-demo.mp4"
     },
