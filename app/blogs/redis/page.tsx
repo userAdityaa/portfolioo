@@ -16,18 +16,18 @@ export default function RedisPage() {
                     alt="Banner 2"
                     width={0}
                     height={0}
-                    className="w-[30rem] h-[12rem] object-cover max-phone:hidden"
+                    className="w-[30rem] h-[12rem] object-cover max-phone:hidden max-ipad:w-[35rem]"
                 />
                 <Image
                     src="/redis_banner.gif"
                     alt="Banner 3"
                     width={0}
                     height={0}
-                    className="w-[30rem] h-[12rem] object-cover max-phone:hidden"
+                    className="w-[30rem] h-[12rem] object-cover max-phone:hidden max-mini:hidden max-ipad:hidden"
                 />
             </div>
 
-            <div className="absolute left-80 top-[15rem] max-w-3xl pb-20 flex flex-col max-phone:left-4 max-phone:-mt-4">
+            <div className="absolute left-80 top-[15rem] max-w-3xl pb-20 flex flex-col max-phone:left-4 max-phone:-mt-4 max-mini:left-12 max-ipad:left-32 max-mini:w-[90%]">
                 <h2 className="text-zinc-300 text-[2rem] font-semibold mb-4 max-phone:text-[1.5rem]">Caching the Vibe: How Redis Supercharges Modern Applications. 💾</h2>
                 <div className="flex flex-col gap-4 text-zinc-400 max-phone:w-[96%]">
                 <p>

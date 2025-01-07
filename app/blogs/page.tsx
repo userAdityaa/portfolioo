@@ -14,7 +14,7 @@ const page = () => {
           alt="Banner 1"
           width={0}
           height={0}
-          className="w-[30rem] h-[12rem] object-cover"
+          className="w-[30rem] h-[12rem] object-cover max-ipad:w-[35rem]"
         />
         <Image
           src="/blogs.gif"
@@ -28,11 +28,11 @@ const page = () => {
           alt="Banner 2"
           width={0}
           height={0}
-          className="w-[30rem] h-[12rem] object-cover max-phone:hidden"
+          className="w-[30rem] h-[12rem] object-cover max-phone:hidden max-mini:hidden max-ipad:hidden"
         />
       </div>
 
-      <div className="flex items-center absolute top-[9.4rem] left-80 gap-[0.8rem] max-phone:hidden">
+      <div className="flex items-center absolute top-[9.4rem] left-80 gap-[0.8rem] max-phone:hidden max-mini:left-12 max-ipad:left-24">
         <ProfileImageSwitcher image_one="/banner-5.jpg" image_two="/banner-6.jpg"/>
         <div className="flex flex-col pt-14">
           <div className="flex items-center gap-3">
@@ -91,7 +91,7 @@ const page = () => {
         </div>
       </div>
 
-      <div className="absolute left-80 top-[20rem] max-w-[52rem] mt-[2rem] pb-20 max-phone:left-4 max-phone:top-[12rem]">
+      <div className="absolute left-80 top-[20rem] max-w-[52rem] mt-[2rem] pb-20 max-phone:left-4 max-phone:top-[12rem] max-mini:left-12 max-mini:w-[90%] max-ipad:left-24">
         <h2 className="text-zinc-300 text-2xl font-semibold mb-6 max-phone:text-xl">Blogs.</h2>
         <div className="bg-[#1A1A1A] rounded-xl p-6 border border-zinc-800 hover:border-zinc-700 max-phone:w-[95%] transition-colors max-phone:h-[33rem]" onClick={() => router.push('/blogs/docker')}>
           <div className="flex items-start gap-4 max-phone:flex-col">
