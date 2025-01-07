@@ -67,7 +67,7 @@ Moreover, Docker makes collaboration across teams—or even continents—more st
                 <p className="text-zinc-400 mt-[1rem]">In a world where chaos often reigns, Docker offers a way to embrace it without being overwhelmed. Its ability to compartmentalize, standardize, and simplify workflows transforms what could be a frustrating experience into one brimming with opportunity and innovation.
                 So, whether you’re a seasoned developer or a curious tinkerer, let Docker be your gateway to a world where the boundaries of creativity are limited only by your imagination—and not your environment.</p>
 
-                <div className="flex items-end">
+                <div className="flex items-end gap-4">
                     <Image src = '/docker_end.jpg' alt="docker end" width={120} height={100} className="mt-[2rem]"></Image>
                     <i>[The end]</i>
                 </div>
