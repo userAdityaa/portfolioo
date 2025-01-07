@@ -12,7 +12,7 @@ const SkillButton = ({ children }: SkillButtonProps) => (
 );
 
 const SkillsSection = () => (
-  <div className="max-w-[50rem] mt-[2rem] pb-20">
+  <div className="max-w-[50rem] mt-[1rem] pb-20">
     <h2 className="text-zinc-300 text-2xl font-semibold mb-4 mt-8">Skills & Tools.</h2>
     <div className="flex items-center flex-wrap gap-4">
       <SkillButton>

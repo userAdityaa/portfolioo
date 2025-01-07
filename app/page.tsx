@@ -3,7 +3,7 @@ import { ContactAndFooter, ProfileImageSwitcher, ProjectsSection, SkillsSection 
 
 export default function Home() {
   return (
-    <div className="bg-[#111111] min-h-screen w-full overflow-y-auto transition-all duration-300">
+    <div className="bg-[#111111] min-h-screen w-full overflow-y-auto transition-all duration-300 max-phone:overflow-y-hidden">
       <div className="flex">
         <Image
           src="/banner.gif"
@@ -48,9 +48,69 @@ export default function Home() {
         </svg>
         Blogs
       </a>
+
+      <div className="hidden max-phone:block absolute left-[26%] top-24"> 
+        <div className="flex flex-col items-center">
+          <Image src = '/profile.jpg' alt="profile" height={500} width={180} className="rounded-lg"></Image>
+          <span className="bg-green-900/30 text-green-400 px-2 py-0.5 rounded text-sm mt-[1rem]">Available</span>
+          <p className="font-bold text-[24px] mt-[0.5rem]">Aditya Chaudhary</p>
+          <p className="text-gray-300">Software Engineer</p>
+          <div className="flex gap-3 mt-1">
+            <div className="relative group">
+              <a href="https://github.com/userAdityaa" className="bg-black w-9 h-9 rounded-lg flex items-center justify-center hover:bg-zinc-900 transition-colors shadow-lg border-[1px] border-zinc-600" target="_blank">
+                <Image src="/github.svg" alt="GitHub" width={24} height={24} className="invert" />
+              </a>
+              <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="relative bg-white text-black text-sm py-1 px-3 rounded-md whitespace-nowrap">
+                  Github
+                  <div className="absolute w-3 h-3 bg-white transform rotate-45 left-1/2 -bottom-1.5 -translate-x-1/2"></div>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative group">
+              <a href="https://x.com/userAdityaa" className="bg-black w-9 h-9 rounded-lg flex items-center justify-center hover:bg-zinc-900 transition-colors shadow-lg border-[1px] border-zinc-600" target="_blank">
+                <Image src="/twitter.svg" alt="Twitter" width={24} height={24} className="invert" />
+              </a>
+              <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="relative bg-white text-black text-sm py-1 px-3 rounded-md whitespace-nowrap">
+                  Twitter
+                  <div className="absolute w-3 h-3 bg-white transform rotate-45 left-1/2 -bottom-1.5 -translate-x-1/2"></div>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative group">
+              <a href="https://www.linkedin.com/in/aditya-chaudhary-1b7354248/" className="bg-black w-9 h-9 rounded-lg flex items-center justify-center hover:bg-zinc-900 transition-colors shadow-lg border-[1px] border-zinc-600" target="_blank">
+                <Image src="/linkedin.svg" alt="LinkedIn" width={24} height={24} className="invert" />
+              </a>
+              <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="relative bg-white text-black text-sm py-1 px-3 rounded-md whitespace-nowrap">
+                  LinkedIn
+                  <div className="absolute w-3 h-3 bg-white transform rotate-45 left-1/2 -bottom-1.5 -translate-x-1/2"></div>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative group">
+              <a href="https://leetcode.com/u/Aditya7841/" className="bg-black w-9 h-9 rounded-lg flex items-center justify-center hover:bg-zinc-900 transition-colors shadow-lg border-[1px] border-zinc-600" target="_blank">
+                <Image src="/leetcode.svg" alt="leetcode" width={24} height={24} className="invert" />
+              </a>
+              <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="relative bg-white text-black text-sm py-1 px-3 rounded-md whitespace-nowrap">
+                  LeetCode
+                  <div className="absolute w-3 h-3 bg-white transform rotate-45 left-1/2 -bottom-1.5 -translate-x-1/2"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
   
-      <div className="flex items-center absolute top-[9.4rem] left-80 gap-[0.8rem]">
-        <ProfileImageSwitcher image_one = '/profile.jpg' image_two = "/profile-2.JPG"/>
+      <div className="flex items-center absolute top-[9.4rem] left-80 gap-[0.8rem] max-phone:left-28 max-phone:hidden">
+        <div className="max-phone:hidden">
+          <ProfileImageSwitcher image_one = '/profile.jpg' image_two = "/profile-2.JPG"/>
+        </div>
         <div className="flex flex-col pt-14">
           <div className="flex items-center gap-3">
             <h1 className="text-zinc-300 font-bold text-[25px]">Aditya Chaudhary</h1>
