@@ -12,6 +12,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      screens: {
+        'max-phone': { max: '600px' },
+    }
     },
   },
   plugins: [],
