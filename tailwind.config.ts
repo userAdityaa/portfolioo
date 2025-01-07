@@ -14,7 +14,9 @@ export default {
       },
       screens: {
         'max-phone': { max: '600px' },
-      }
+        'max-ipad': { min: '1000px', max: '1200px' }, 
+        'max-mini': { min: '700px', max: '1000px' }, 
+      },
     },
   },
   plugins: [],

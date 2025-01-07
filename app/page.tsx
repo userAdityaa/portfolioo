@@ -16,7 +16,7 @@ export default function Home() {
           alt="Banner 1"
           width={0}
           height={0}
-          className="w-[30rem] h-[12rem] object-cover"
+          className="w-[30rem] h-[12rem] object-cover max-ipad:w-[35rem]"
         />
         <Image
           src="/banner-2.gif"
@@ -30,7 +30,7 @@ export default function Home() {
           alt="Banner 2"
           width={0}
           height={0}
-          className="w-[30rem] h-[12rem] object-cover"
+          className="w-[30rem] h-[12rem] object-cover max-ipad:hidden"
         />
       </div>
       
@@ -117,7 +117,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex items-center absolute top-[9.4rem] left-80 gap-[0.8rem] max-phone:top-4 max-phone:left-28 max-phone:hidden">
+      <div className="flex items-center absolute top-[9.4rem] left-80 gap-[0.8rem] max-phone:top-4 max-phone:left-28 max-phone:hidden max-ipad:left-32 max-mini:left-12">
         <div className="max-phone:hidden">
           <ProfileImageSwitcher image_one = '/profile.jpg' image_two = "/profile-2.JPG"/>
         </div>
@@ -179,7 +179,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="absolute left-80 top-[20rem] max-w-3xl mt-[2rem] pb-20 flex flex-col max-phone:left-4 max-phone:mt-[0rem] max-phone:top-[15rem] max-phone:w-[92.5%]">
+      <div className="absolute left-80 top-[20rem] max-w-3xl mt-[2rem] pb-20 flex flex-col max-phone:left-4 max-phone:mt-[0rem] max-phone:top-[15rem] max-phone:w-[92.5%] max-mini:left-12 max-mini:w-[90%] max-ipad:left-32 max-ipad:w-[100rem]">
         <h2 className="text-zinc-300 text-2xl font-semibold mb-4 max-phone:text-xl">About Me.</h2>
         <div className="flex flex-col gap-4 text-zinc-400 max-phone:text-[0.92rem]">
           <p>
