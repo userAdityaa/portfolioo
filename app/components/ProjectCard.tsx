@@ -42,7 +42,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
   return (
     <>
-      <div className={`bg-zinc-900/50 rounded-xl overflow-hidden border border-zinc-800 ${className}`}>
+      <div className={`bg-zinc-900/50 rounded-xl overflow-hidden border border-zinc-800 ${className} max-phone:w-[95%]`}>
         <div className="relative">
         {showVideo ? (
             <div className="relative w-full h-96"> 
@@ -105,7 +105,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </div>
       </div>
 
-      {/* Expanded Video Modal */}
       {isExpanded && (
         <div 
           className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
@@ -199,7 +198,7 @@ const ProjectsSection: React.FC = () => {
       </div>
       <button 
         onClick={() => setShowAll(!showAll)}
-        className="w-full mt-6 py-4 flex items-center justify-center gap-2 bg-zinc-900/50 rounded-xl border border-zinc-800 text-zinc-400 hover:bg-zinc-900 transition-colors"
+        className="w-full mt-6 py-4 flex items-center justify-center gap-2 bg-zinc-900/50 rounded-xl border border-zinc-800 text-zinc-400 hover:bg-zinc-900 transition-colors max-phone:w-[95%]"
       >
         <span>{showAll ? 'Show less' : 'Show all'}</span>
         <svg 

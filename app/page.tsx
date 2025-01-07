@@ -209,9 +209,8 @@ export default function Home() {
         </div>
         <SkillsSection/>
         <div className="flex items-center">
-          <Image src = '/project.gif' alt="tired" width={500} height={100} className="-mt-[2rem]"></Image>
+          <Image src = '/project.gif' alt="tired" width={500} height={100} className="-mt-[2rem] max-phone:w-[95%] max-phone:h-[95%]"></Image>
         </div>
-
         <ProjectsSection/>
         <ContactAndFooter/>
       </div>      
