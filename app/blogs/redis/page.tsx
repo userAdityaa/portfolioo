@@ -16,20 +16,20 @@ export default function RedisPage() {
                     alt="Banner 2"
                     width={0}
                     height={0}
-                    className="w-[30rem] h-[12rem] object-cover"
+                    className="w-[30rem] h-[12rem] object-cover max-phone:hidden"
                 />
                 <Image
                     src="/redis_banner.gif"
                     alt="Banner 3"
                     width={0}
                     height={0}
-                    className="w-[30rem] h-[12rem] object-cover"
+                    className="w-[30rem] h-[12rem] object-cover max-phone:hidden"
                 />
             </div>
 
-            <div className="absolute left-80 top-[15rem] max-w-3xl pb-20 flex flex-col">
-                <h2 className="text-zinc-300 text-[2rem] font-semibold mb-4">Caching the Vibe: How Redis Supercharges Modern Applications. 💾</h2>
-                <div className="flex flex-col gap-4 text-zinc-400">
+            <div className="absolute left-80 top-[15rem] max-w-3xl pb-20 flex flex-col max-phone:left-4 max-phone:-mt-4">
+                <h2 className="text-zinc-300 text-[2rem] font-semibold mb-4 max-phone:text-[1.5rem]">Caching the Vibe: How Redis Supercharges Modern Applications. 💾</h2>
+                <div className="flex flex-col gap-4 text-zinc-400 max-phone:w-[96%]">
                 <p>
                 In the ever-expanding digital universe, users demand speed, reliability, and real-time interactions. Whether it’s instant social media updates, seamless e-commerce experiences, or real-time gaming, there’s one technology quietly working behind the scenes to make it all happen: Redis.
                 Redis, short for Remote Dictionary Server, is more than just a database. It’s a high-performance, in-memory data structure store that has become the go-to solution for developers looking to build ultra-fast, scalable applications. But Redis is far from boring—its versatility and speed make it a game-changer for modern development. Let’s dive into how Redis supercharges modern applications and why it’s the secret weapon for today’s tech giants..

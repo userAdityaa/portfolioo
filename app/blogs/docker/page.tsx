@@ -16,20 +16,20 @@ export default function DockerPage() {
                   alt="Banner 2"
                   width={0}
                   height={0}
-                  className="w-[30rem] h-[12rem] object-cover"
+                  className="w-[30rem] h-[12rem] object-cover max-phone:hidden"
                 />
                 <Image
                   src="/chaos.gif"
                   alt="Banner 2"
                   width={0}
                   height={0}
-                  className="w-[30rem] h-[12rem] object-cover"
+                  className="w-[30rem] h-[12rem] object-cover max-phone:hidden"
                 />
               </div>
 
-              <div className="absolute left-80 top-[15rem] max-w-3xl pb-20 flex flex-col">
-                <h2 className="text-zinc-300 text-[2rem] font-semibold mb-4">Dockerized Chaos: How Containers Revolutionize Creative Development Workflows. ⚔️</h2>
-                <div className="flex flex-col gap-4 text-zinc-400">
+              <div className="absolute left-80 top-[15rem] max-w-3xl pb-20 flex flex-col max-phone:left-4">
+                <h2 className="text-zinc-300 text-[2rem] font-semibold mb-4 max-phone:text-[1.5rem] max-phone:-mt-4">Dockerized Chaos: How Containers Revolutionize Creative Development Workflows. ⚔️</h2>
+                <div className="flex flex-col gap-4 text-zinc-400 max-phone:w-[96%]">
                 <p>
                 In the ever-evolving world of software development, chaos is often the norm. Developers juggle different environments, dependencies, and configurations, often resulting in hours lost to debugging and setup woes. Enter Docker—a tool that doesn’t just streamline workflows but also unleashes a level of creativity and experimentation that was once a pipe dream.
                 Docker, at its core, is a platform designed to package and run applications in lightweight, portable containers. But beyond its utility, Docker has redefined the way developers think about building, testing, and deploying software. Let’s dive into how Docker brings order to chaos while fostering innovation and creativity.
