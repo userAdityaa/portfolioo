@@ -1,10 +1,16 @@
 import Image from "next/image";
 import { ContactAndFooter, ProfileImageSwitcher, ProjectsSection, SkillsSection } from "./components";
+import { Roboto } from "next/font/google";
+
+const roboto = Roboto({
+  subsets: ['latin'], 
+  weight: '700',
+})
 
 export default function Home() {
   return (
-    <div className="bg-[#111111] min-h-screen w-full overflow-y-auto transition-all duration-300 max-phone:overflow-y-hidden">
-      <div className="flex">
+    <div className={`bg-[#111111] min-h-screen w-full overflow-y-auto transition-all duration-300 max-phone:overflow-y-hidden`}>
+      <div className="flex max-phone:hidden">
         <Image
           src="/banner.gif"
           alt="Banner 1"
@@ -30,10 +36,10 @@ export default function Home() {
       
       <a 
         href="/blogs" 
-        className="flex items-center gap-2 bg-zinc-900 px-4 py-2 h-fit rounded-lg hover:bg-zinc-800 transition-colors shadow-lg text-zinc-300 absolute right-2 top-2"
+        className="flex items-center gap-2 bg-zinc-900 px-4 py-2 h-fit rounded-lg hover:bg-zinc-800 transition-colors shadow-lg text-zinc-300 absolute right-2 top-2 max-phone:px-2 max-phone:text-[14px]"
       >
         <svg 
-          className="w-5 h-5" 
+          className="w-5 h-5 max-phone:w-4 max-phone:h-4" 
           viewBox="0 0 24 24" 
           fill="none" 
           xmlns="http://www.w3.org/2000/svg"
@@ -49,13 +55,15 @@ export default function Home() {
         Blogs
       </a>
 
-      <div className="hidden max-phone:block absolute left-[26%] top-24"> 
-        <div className="flex flex-col items-center">
-          <Image src = '/profile.jpg' alt="profile" height={500} width={180} className="rounded-lg"></Image>
-          <span className="bg-green-900/30 text-green-400 px-2 py-0.5 rounded text-sm mt-[1rem]">Available</span>
-          <p className="font-bold text-[24px] mt-[0.5rem]">Aditya Chaudhary</p>
-          <p className="text-gray-300">Software Engineer</p>
-          <div className="flex gap-3 mt-1">
+      <div className="hidden max-phone:block mt-[4rem] ml-[1rem]">
+        <div className="flex flex-col gap-2">
+          <span className="bg-green-900/30 text-green-400 px-2 py-0.5 rounded text-sm w-[20%]">Available</span>
+          <div className="flex items-center gap-4">
+            <Image src = '/profile.jpg' alt="profile" height={300} width={125} className="rounded-lg"></Image>
+            <div className="flex flex-col">
+              <h2 className={`font-bold text-[25.5px] ${roboto.className}`}>Aditya Chaudhary</h2>
+              <p className="font-thin text-gray-300">Software Engineer</p>
+              <div className="flex gap-3 mt-1">
             <div className="relative group">
               <a href="https://github.com/userAdityaa" className="bg-black w-9 h-9 rounded-lg flex items-center justify-center hover:bg-zinc-900 transition-colors shadow-lg border-[1px] border-zinc-600" target="_blank">
                 <Image src="/github.svg" alt="GitHub" width={24} height={24} className="invert" />
@@ -104,10 +112,12 @@ export default function Home() {
               </div>
             </div>
           </div>
+            </div>
+          </div>  
         </div>
       </div>
-  
-      <div className="flex items-center absolute top-[9.4rem] left-80 gap-[0.8rem] max-phone:left-28 max-phone:hidden">
+
+      <div className="flex items-center absolute top-[9.4rem] left-80 gap-[0.8rem] max-phone:top-4 max-phone:left-28 max-phone:hidden">
         <div className="max-phone:hidden">
           <ProfileImageSwitcher image_one = '/profile.jpg' image_two = "/profile-2.JPG"/>
         </div>
@@ -169,9 +179,9 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="absolute left-80 top-[20rem] max-w-3xl mt-[2rem] pb-20 flex flex-col">
-        <h2 className="text-zinc-300 text-2xl font-semibold mb-4">About Me.</h2>
-        <div className="flex flex-col gap-4 text-zinc-400">
+      <div className="absolute left-80 top-[20rem] max-w-3xl mt-[2rem] pb-20 flex flex-col max-phone:left-4 max-phone:mt-[0rem] max-phone:top-[15rem]">
+        <h2 className="text-zinc-300 text-2xl font-semibold mb-4 max-phone:text-[1.3rem]">About Me.</h2>
+        <div className="flex flex-col gap-4 text-zinc-400 max-phone:text-[0.92rem]">
           <p>
             Hi, I'm Aditya Chaudhary, a Computer Science undergraduate and full-stack developer passionate about creating and delivering projects that make a real-world impact.
           </p>
@@ -183,14 +193,14 @@ export default function Home() {
           </p>
         </div>
 
-        <h2 className="text-zinc-300 text-2xl font-semibold mb-4 mt-8">Hire Me.</h2>
-        <div className="flex flex-col gap-4 text-zinc-400">
+        <h2 className="text-zinc-300 text-2xl font-semibold mb-4 mt-8 max-phone:text-[1.3rem]">Hire Me.</h2>
+        <div className="flex flex-col gap-4 text-zinc-400 max-phone:text-[0.92rem]">
           <p>
             I'm currently available for internships, full-time opportunities, and freelance projects. If you're looking for someone passionate, skilled, and ready to contribute, I'm here to help bring your ideas to life!
           </p>
           <div className="flex gap-4">
-            <button className="flex items-center gap-2 bg-zinc-900 px-4 py-2 rounded-lg hover:bg-zinc-900 transition-colors shadow-lg border-[1px] border-zinc-600 text-zinc-300">
-              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button className="flex items-center gap-2 bg-zinc-900 px-4 py-2 rounded-lg hover:bg-zinc-900 transition-colors shadow-lg border-[1px] border-zinc-600 text-zinc-300 max-phone:px-2">
+              <svg className="w-5 h-5 max-phone:w-4 max-phone:h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M8 7V3M16 7V3M7 11H17M5 21H19C20.1046 21 21 20.1046 21 19V7C21 5.89543 20.1046 5 19 5H5C3.89543 5 3 5.89543 3 7V19C3 20.1046 3.89543 21 5 21Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
               Hire Me
