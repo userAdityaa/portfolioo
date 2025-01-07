@@ -180,7 +180,7 @@ export default function Home() {
       </div>
 
       <div className="absolute left-80 top-[20rem] max-w-3xl mt-[2rem] pb-20 flex flex-col max-phone:left-4 max-phone:mt-[0rem] max-phone:top-[15rem]">
-        <h2 className="text-zinc-300 text-2xl font-semibold mb-4 max-phone:text-[1.3rem]">About Me.</h2>
+        <h2 className="text-zinc-300 text-2xl font-semibold mb-4 max-phone:text-xl">About Me.</h2>
         <div className="flex flex-col gap-4 text-zinc-400 max-phone:text-[0.92rem]">
           <p>
             Hi, I'm Aditya Chaudhary, a Computer Science undergraduate and full-stack developer passionate about creating and delivering projects that make a real-world impact.
@@ -193,7 +193,7 @@ export default function Home() {
           </p>
         </div>
 
-        <h2 className="text-zinc-300 text-2xl font-semibold mb-4 mt-8 max-phone:text-[1.3rem]">Hire Me.</h2>
+        <h2 className="text-zinc-300 text-2xl font-semibold mb-4 mt-8 max-phone:text-xl">Hire Me.</h2>
         <div className="flex flex-col gap-4 text-zinc-400 max-phone:text-[0.92rem]">
           <p>
             I'm currently available for internships, full-time opportunities, and freelance projects. If you're looking for someone passionate, skilled, and ready to contribute, I'm here to help bring your ideas to life!

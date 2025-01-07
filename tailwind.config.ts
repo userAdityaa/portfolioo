@@ -14,7 +14,7 @@ export default {
       },
       screens: {
         'max-phone': { max: '600px' },
-    }
+      }
     },
   },
   plugins: [],
