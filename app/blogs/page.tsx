@@ -21,18 +21,18 @@ const page = () => {
           alt="Banner 2"
           width={0}
           height={0}
-          className="w-[30rem] h-[12rem] object-cover"
+          className="w-[30rem] h-[12rem] object-cover max-phone:hidden"
         />
         <Image
           src="/blogs.gif"
           alt="Banner 2"
           width={0}
           height={0}
-          className="w-[30rem] h-[12rem] object-cover"
+          className="w-[30rem] h-[12rem] object-cover max-phone:hidden"
         />
       </div>
 
-      <div className="flex items-center absolute top-[9.4rem] left-80 gap-[0.8rem]">
+      <div className="flex items-center absolute top-[9.4rem] left-80 gap-[0.8rem] max-phone:hidden">
         <ProfileImageSwitcher image_one="/banner-5.jpg" image_two="/banner-6.jpg"/>
         <div className="flex flex-col pt-14">
           <div className="flex items-center gap-3">
@@ -91,41 +91,41 @@ const page = () => {
         </div>
       </div>
 
-      <div className="absolute left-80 top-[20rem] max-w-[52rem] mt-[2rem] pb-20">
-        <h2 className="text-zinc-300 text-2xl font-semibold mb-6">Blogs.</h2>
-        <div className="bg-[#1A1A1A] rounded-xl p-6 border border-zinc-800 hover:border-zinc-700 transition-colors" onClick={() => router.push('/blogs/docker')}>
-          <div className="flex items-start gap-4">
+      <div className="absolute left-80 top-[20rem] max-w-[52rem] mt-[2rem] pb-20 max-phone:left-4 max-phone:top-[12rem]">
+        <h2 className="text-zinc-300 text-2xl font-semibold mb-6 max-phone:text-xl">Blogs.</h2>
+        <div className="bg-[#1A1A1A] rounded-xl p-6 border border-zinc-800 hover:border-zinc-700 max-phone:w-[95%] transition-colors max-phone:h-[33rem]" onClick={() => router.push('/blogs/docker')}>
+          <div className="flex items-start gap-4 max-phone:flex-col">
             <Image
               src="/first.jpg"
               alt="docker chaos"
               width={180}
               height={56}
-              className="rounded-lg"
+              className="rounded-lg max-phone:w-[100%] max-phone:h-[15rem]"
             />
             <div className="flex-1">
-              <h3 className="text-zinc-200 text-xl font-semibold mb-2">
+              <h3 className="text-zinc-200 text-xl font-semibold mb-2 max-phone:text-[1.10rem]">
               Dockerized Chaos: How Containers Revolutionize Creative Development Workflows
               </h3>
-              <p className="text-zinc-400 text-base leading-relaxed">
+              <p className="text-zinc-400 text-base leading-relaxed max-phone:text-[14px]">
               Explore how Docker transforms the way developers think about workflows, bringing organization to the chaos of multi-environment setups. From running experimental side projects to scaling production-ready applications.
               </p>
             </div>
           </div>
         </div>
-        <div className="bg-[#1A1A1A] rounded-xl p-6 border border-zinc-800 hover:border-zinc-700 transition-colors mt-[2rem]" onClick={() => router.push('/blogs/redis')}>
-          <div className="flex items-start gap-4">
+        <div className="bg-[#1A1A1A] rounded-xl p-6 border border-zinc-800 hover:border-zinc-700 max-phone:w-[95%]  transition-colors mt-[2rem]" onClick={() => router.push('/blogs/redis')}>
+          <div className="flex items-start gap-4 max-phone:flex-col">
             <Image
               src="/second.jpg"
               alt="redis cache"
               width={180}
               height={56}
-              className="rounded-lg"
+              className="rounded-lg max-phone:w-[100%] max-phone:h-[15rem]"
             />
             <div className="flex-1">
-              <h3 className="text-zinc-200 text-xl font-semibold mb-2">
+              <h3 className="text-zinc-200 text-xl font-semibold mb-2 max-phone:text-[1.10rem]">
               Caching the Vibe: How Redis Supercharges Modern Applications
               </h3>
-              <p className="text-zinc-400 text-base leading-relaxed">
+              <p className="text-zinc-400 text-base leading-relaxed max-phone:text-[14px]">
               Redis isn't just a database; it's the secret sauce that powers blazing-fast apps and seamless user experiences. From instant caching to real-time analytics, this blog explores the quirky yet brilliant ways Redis takes performance to the next level.
               </p>
             </div>
