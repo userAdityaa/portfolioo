@@ -42,7 +42,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
   return (
     <>
-      <div className={`bg-zinc-900/50 rounded-xl overflow-hidden border border-zinc-800 ${className} max-phone:w-[95%]`}>
+      <div className={`bg-zinc-900/50 rounded-xl overflow-hidden border border-zinc-800 ${className} max-phone:w-[98%]`}>
         <div className="relative">
         {showVideo ? (
             <div className="relative w-full h-96"> 
@@ -198,7 +198,7 @@ const ProjectsSection: React.FC = () => {
       </div>
       <button 
         onClick={() => setShowAll(!showAll)}
-        className="w-full mt-6 py-4 flex items-center justify-center gap-2 bg-zinc-900/50 rounded-xl border border-zinc-800 text-zinc-400 hover:bg-zinc-900 transition-colors max-phone:w-[95%]"
+        className="w-full mt-6 py-4 flex items-center justify-center gap-2 bg-zinc-900/50 rounded-xl border border-zinc-800 text-zinc-400 hover:bg-zinc-900 transition-colors max-phone:w-[98%]"
       >
         <span>{showAll ? 'Show less' : 'Show all'}</span>
         <svg 

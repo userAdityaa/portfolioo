@@ -179,7 +179,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="absolute left-80 top-[20rem] max-w-3xl mt-[2rem] pb-20 flex flex-col max-phone:left-4 max-phone:mt-[0rem] max-phone:top-[15rem]">
+      <div className="absolute left-80 top-[20rem] max-w-3xl mt-[2rem] pb-20 flex flex-col max-phone:left-4 max-phone:mt-[0rem] max-phone:top-[15rem] max-phone:w-[92.5%]">
         <h2 className="text-zinc-300 text-2xl font-semibold mb-4 max-phone:text-xl">About Me.</h2>
         <div className="flex flex-col gap-4 text-zinc-400 max-phone:text-[0.92rem]">
           <p>
@@ -209,7 +209,7 @@ export default function Home() {
         </div>
         <SkillsSection/>
         <div className="flex items-center">
-          <Image src = '/project.gif' alt="tired" width={500} height={100} className="-mt-[2rem] max-phone:w-[95%] max-phone:h-[95%]"></Image>
+          <Image src = '/project.gif' alt="tired" width={500} height={100} className="-mt-[2rem] max-phone:w-[99%] max-phone:h-[95%]"></Image>
         </div>
         <ProjectsSection/>
         <ContactAndFooter/>
