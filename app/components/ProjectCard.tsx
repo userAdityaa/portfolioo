@@ -136,6 +136,15 @@ const ProjectsSection: React.FC = () => {
 
   const projects: Project[] = [
     {
+      title: "Cosmic Tales Project",
+      description: "Cosmic Tales is a minimalist, tech-driven platform built on Next.js, TypeScript, Redis, Python, and Flask. Enhanced with Sentiment Analysis, Gemini for AI insights, and Cloudinary for media management, it predicts and give a tarot cards to the user based on their activities on X / Twitter.",
+      status: "Live",
+      image: "/cosmic_project.png",
+      demoLink: "https://cosmic-tales.vercel.app/",
+      githubLink: "https://github.com/userAdityaa/celestial_frontend",
+      previewVideo: "/cosmic.mov"
+    },
+    {
       title: "Bookmark Project",
       description: "This Project stands out with it's minimal design and the use case of it, as this website let the user store any website url along with that any long/short text, colors. This project is fully made upon next.js, typescript, prisma and neon for postgresql.",
       status: "Live",
