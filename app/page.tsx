@@ -1,13 +1,51 @@
+'use client'
 import Image from "next/image";
 import { ContactAndFooter, ProfileImageSwitcher, ProjectsSection, SkillsSection } from "./components";
 import { Roboto } from "next/font/google";
+import { useState } from "react";
+import HireMeModal from "./components/HireModal";
 
 const roboto = Roboto({
   subsets: ['latin'], 
   weight: '700',
 })
 
+type FormData = {
+  name: string;
+  email: string;
+  message: string;
+};
+
 export default function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const handleHireMeClick = () => {
+    setIsModalOpen(true);
+  };
+  const handleModalClose = () => {
+    setIsModalOpen(false);
+  };
+  const handleFormSubmit = async (formData: FormData) => {
+    try {
+      console.log(JSON.stringify(formData))
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        alert("Thank you! Your message has been sent.");
+        setIsModalOpen(false);
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Something went wrong. Please try again.");
+    }
+  };
   return (
     <div className={`bg-[#111111] min-h-screen w-full overflow-y-auto transition-all duration-300 max-phone:overflow-y-hidden`}>
       <div className="flex max-phone:hidden">
@@ -199,13 +237,14 @@ export default function Home() {
             I'm currently available for internships, full-time opportunities, and freelance projects. If you're looking for someone passionate, skilled, and ready to contribute, I'm here to help bring your ideas to life!
           </p>
           <div className="flex gap-4">
-            <button className="flex items-center gap-2 bg-zinc-900 px-4 py-2 rounded-lg hover:bg-zinc-900 transition-colors shadow-lg border-[1px] border-zinc-600 text-zinc-300 max-phone:px-2">
+            <button className="flex items-center gap-2 bg-zinc-900 px-4 py-2 rounded-lg hover:bg-zinc-900 transition-colors shadow-lg border-[1px] border-zinc-600 text-zinc-300 max-phone:px-2" onClick={handleHireMeClick}>
               <svg className="w-5 h-5 max-phone:w-4 max-phone:h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M8 7V3M16 7V3M7 11H17M5 21H19C20.1046 21 21 20.1046 21 19V7C21 5.89543 20.1046 5 19 5H5C3.89543 5 3 5.89543 3 7V19C3 20.1046 3.89543 21 5 21Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
               Hire Me
             </button>
           </div>
+          {isModalOpen && <HireMeModal onClose={handleModalClose} onSubmit={handleFormSubmit} />}
         </div>
         <SkillsSection/>
         <div className="flex items-center">
