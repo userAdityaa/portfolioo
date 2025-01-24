@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Eye, Link as LinkIcon, Github, X } from "lucide-react";
 import { useState } from "react";
 
-type ProjectStatus = "Live" | "Building";
+type ProjectStatus = "Live" | "Building" | "Fixing";
 
 interface Project {
   title: string;
@@ -136,6 +136,15 @@ const ProjectsSection: React.FC = () => {
 
   const projects: Project[] = [
     {
+      title: "RoboMarket Project - Web3",
+      description: "Web3 Robot Marketplace is a cutting-edge, decentralized platform built on Next.js, TypeScript, Solidity, and IPFS, designed to revolutionize the way robots and AI-powered devices are bought, sold, and traded. The platform features custom smart contracts for both NFT-based robot ownership and crowdfunding campaigns, ensuring transparency and trustlessness. With a stunning, user-friendly UI, seamless MetaMask integration, the marketplace offers a premium experience for creators, buyers, and investors.",
+      status: "Fixing",
+      image: "/marketplace_project.png",
+      demoLink: "https://robomarket.vercel.app",
+      githubLink: "https://github.com/userAdityaa/robomarket_frontend/tree/main",
+      // previewVideo: "/videos/meal-demo.mp4"
+    },
+    {
       title: "Cosmic Tales Project",
       description: "Cosmic Tales is a minimalist, tech-driven platform built on Next.js, TypeScript, Redis, Python, and Flask. Enhanced with Sentiment Analysis, Gemini for AI insights, and Cloudinary for media management, it predicts and give a tarot cards to the user based on their activities on X / Twitter.",
       status: "Live",
@@ -180,20 +189,12 @@ const ProjectsSection: React.FC = () => {
       previewVideo: "/videos/meal-demo.mp4"
     }, 
     {
-        title: "Blog Project",
-        description: "A fullstack application for blogging, made with the help of javascript and next.js.",
-        status: "Building",
-        image: "/blog_project.png",
-        githubLink: "https://github.com/userAdityaa/meal-planner",
-        previewVideo: "/videos/meal-demo.mp4"
-    }, 
-    {
-        title: "Web3 Marketplace Project",
-        description: "Web3 Web3 Web3 Web3 Web3 Web3 Web3 Web3 Web3 Web3 Web3",
-        status: "Building",
-        image: "/marketplace_project.png",
-        githubLink: "https://github.com/userAdityaa/meal-planner",
-        previewVideo: "/videos/meal-demo.mp4"
+      title: "Blog Project",
+      description: "A fullstack application for blogging, made with the help of javascript and next.js.",
+      status: "Building",
+      image: "/blog_project.png",
+      githubLink: "https://github.com/userAdityaa/meal-planner",
+      previewVideo: "/videos/meal-demo.mp4"
     }
   ];
 
