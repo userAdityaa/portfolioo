@@ -7,6 +7,8 @@ type EmailRequestBody = {
   message: string;
 };
 
+require('dotenv').config();
+
 export async function POST(request: Request) {
   try {
     const { name, email, message }: EmailRequestBody = await request.json();
