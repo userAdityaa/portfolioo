@@ -10,9 +10,12 @@ const roboto = Roboto({
   weight: '700',
 })
 
+
 type FormData = {
   name: string;
   email: string;
+  phone: string;
+  countryCode: string;
   message: string;
 };
 
